@@ -31,7 +31,11 @@ def train_model(X_train, y_train):
     y_pred = model.fit(X_train, y_train)
     return model
 
-def Evaluate_model():
+def Evaluate_model(model, X_test, y_test):
+
+    prediction = model.predict(X_test)
+    mse = mean_squared_error(y_test, prediction)
+    r2 =  r2_score(y_test, prediction)
     
 
 def save_model():
