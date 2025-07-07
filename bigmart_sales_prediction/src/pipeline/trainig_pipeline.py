@@ -1,3 +1,9 @@
+
+"""
+    Script to run the training pipeline for the model.
+    :param file_path: Path to the dataset CSV file.
+    :param target_column: Name of the target column.
+    """
 from src.models.lr import main
 
 processed_columns = [
@@ -24,7 +30,7 @@ processed_columns = [
 
 if __name__ == "__main__":
     # Example usage
-    file_path = "data\processed\train.csv"  # Replace with your dataset path
+    file_path = "data/processed/train.csv"  # Replace with your dataset path
     
     target_column = "Sales"  # Replace with your target column name
     main(file_path, target_column, processed_columns)
